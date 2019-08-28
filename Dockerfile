@@ -1,5 +1,5 @@
 FROM alpine:3.10
-LABEL maintainer "Chris Wells <chris@cogito.io>"
+LABEL maintainer "Chris Wells <chris@cevanwells.com>"
 
 RUN apk add --no-cache lftp
 
@@ -8,6 +8,9 @@ ENV APP_SHARE_DIR=/usr/local/share/lftp
 ENV FTP_IP="IP ADDRESS"
 ENV FTP_USER="FTP USERNAME"
 ENV FTP_PASS="FTP PASSWORD"
+ENV FTP_OP="FTP OPERATION"
+ENV FTP_TARGET="FTP TARGET"
+ENV LOCAL_TARGET="LOCAL TARGET"
 
 WORKDIR $APP_DIR
 RUN mkdir config
